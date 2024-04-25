@@ -1,2 +1,7 @@
-package com.peppo.belajarspringdasar;public class HelloWorldConfiguration {
+package com.peppo.belajarspringdasar;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class HelloWorldConfiguration {
 }
