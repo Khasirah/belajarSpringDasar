@@ -2,6 +2,7 @@ package com.peppo.belajarspringdasar;
 
 import com.peppo.belajarspringdasar.listener.LoginAgainSuccessListener;
 import com.peppo.belajarspringdasar.listener.LoginSuccessListener;
+import com.peppo.belajarspringdasar.listener.UserListener;
 import com.peppo.belajarspringdasar.service.UserService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -17,7 +18,8 @@ public class EventListenerTest {
     @Import({
             UserService.class,
             LoginSuccessListener.class,
-            LoginAgainSuccessListener.class
+            LoginAgainSuccessListener.class,
+            UserListener.class
     })
     public static class TestConfiguration {}
     
@@ -36,4 +38,5 @@ public class EventListenerTest {
         Assertions.assertEquals(false, userService.login("popi", "salah"));
         Assertions.assertEquals(false, userService.login("haris", "rahasia"));
     }
+
 }
